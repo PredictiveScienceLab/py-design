@@ -26,4 +26,4 @@ Demos
 
 Here are some demos demonstrating how to use the package:
 + [``demos/demo1.py``](demos/demo1.py): Centered Latin Square Design.
-
++ [``demos/demo2.py``](demos/demo2.py): Latin Edge Square Design.
