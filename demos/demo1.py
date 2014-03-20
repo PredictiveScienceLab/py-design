@@ -4,6 +4,9 @@ Construct a centered Latin Square design.
 Author:
     Ilias Bilionis
 
+Date:
+    3/19/2014
+
 """
 
 

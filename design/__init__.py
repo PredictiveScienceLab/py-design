@@ -90,7 +90,7 @@ def latin_edge(num_points, num_dim, seed=None):
 
 def latin_random(num_points, num_dim, seed=None):
     """
-    Construct a Latin Edge Square design.
+    Construct a Latin Random Square design.
 
     This is a wrapper of the fortran code:
     `latin_center() <http://people.sc.fsu.edu/~jburkardt/f_src/latin_random/latin_random.html>`_.
