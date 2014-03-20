@@ -306,7 +306,7 @@ def ihs(num_points, num_dim, seed=None, duplication=5):
 
 def sobol(num_points, num_dim, skip=0):
     """
-    Generate the Hammersley quasirandom sequence.
+    Generate the Sobol quasirandom sequence.
 
     Parameters
     ----------
@@ -328,7 +328,7 @@ def sobol(num_points, num_dim, skip=0):
 
 def lambert(num_points, num_dim):
     """
-    Generate the Hammersley quasirandom sequence.
+    Generate the Lambert quasirandom sequence.
 
     Parameters
     ----------

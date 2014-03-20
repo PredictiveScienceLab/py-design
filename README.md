@@ -36,3 +36,14 @@ Here are some demos demonstrating how to use the package:
 + [``demos/demo9.py``](demos/demo9.py): Sparse Grid: Gauss Legendre Open Weakly Nested rule.
 + [``demos/demo10.py``](demos/demo10.py): Sparse Grid: Gauss Hermite Open Weakly Nested rule.
 + [``demos/demo11.py``](demos/demo11.py): Sparse Grid: Gauss Laguerre Open Non Nested rule.
++ [``demos/demo12.py``](demos/demo12.py): Generate the Faure quasirandom sequence.
++ [``demos/demo13.py``](demos/demo13.py): Generate the Halton quasirandom sequence.
++ [``demos/demo14.py``](demos/demo14.py): Generate the Hammersley quasirandom sequence.
++ [``demos/demo15.py``](demos/demo15.py): Generate the Sobol quasirandom sequence.
++ [``demos/demo16.py``](demos/demo16.py): Generate the Lambert quasirandom sequence.
++ [``demos/demo17.py``](demos/demo17.py): Generate the Improved Distributed Hypercube Sequence.
+
+
+TODO
+----
++ Add references to each algorithm.
