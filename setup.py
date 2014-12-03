@@ -7,9 +7,15 @@ import os
 import glob
 
 
-setup(name='Design points for random experiments',
+setup(name='py-design',
+      versio='1.0',
+      description='Design points for random experiments',
       author='Ilias Bilionis',
-      version='0.0',
+      author_email='ibilion@purdue.edu',
+      url='https://github.com/ebilionis/py-design',
+      download_url='https://github.com/ebilionis/py-design/tarball/1.0',
+      keywards=['design', 'random experiment', 'latin hypercube',
+                'sparse grid', 'computer experiments'],
       ext_modules=[Extension('design._design',
                             glob.glob(os.path.join('src', '*.f90')))],
       packages=['design'])
