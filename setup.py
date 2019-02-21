@@ -8,7 +8,7 @@ import glob
 
 
 setup(name='py-design',
-      versio='1.0',
+      version='1.0',
       description='Design points for random experiments',
       author='Ilias Bilionis',
       author_email='ibilion@purdue.edu',
@@ -17,5 +17,6 @@ setup(name='py-design',
       keywards=['design', 'random experiment', 'latin hypercube',
                 'sparse grid', 'computer experiments'],
       ext_modules=[Extension('design._design',
-                            glob.glob(os.path.join('src', '*.f90')))],
+                            glob.glob(os.path.join('src', '*.f90')),
+                            extra_link_args=['-undefined dynamic_lookup'])],
       packages=['design'])

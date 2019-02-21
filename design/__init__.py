@@ -12,13 +12,13 @@ __all__ = ['latin_center', 'latin_edge', 'latin_random', 'latinize',
            'sparse_grid', 'faure', 'halton', 'ihs']
 
 
-import _design as design
+import design._design as _design
 
 
 def _check_args(num_points, num_dim, seed):
     """Check if the arguments to the latin_*() functions are ok."""
     if seed is None:
-        seed = design.get_seed()
+        seed = _design.get_seed()
     seed = int(seed)
     num_points = int(num_points)
     num_dim = int(num_dim)
@@ -30,7 +30,7 @@ def _check_args(num_points, num_dim, seed):
 
 def latin_center(num_points, num_dim, seed=None):
     """
-    Construct a centered Latin Square design.
+    Construct a centered Latin Square _design.
 
     This is a wrapper of the fortran code:
     `latin_center() <http://people.sc.fsu.edu/~jburkardt/f_src/latin_center/latin_center.html>`_.
@@ -51,16 +51,16 @@ def latin_center(num_points, num_dim, seed=None):
 
     Examples
     --------
-    >>> x = best.design.latin_center(10, 2)
+    >>> x = best._design.latin_center(10, 2)
     >>> print x
     """
     num_points, num_dim, seed = _check_args(num_points, num_dim, seed)
-    return design.latin_center(num_dim, num_points, seed).T
+    return _design.latin_center(num_dim, num_points, seed).T
 
 
 def latin_edge(num_points, num_dim, seed=None):
     """
-    Construct a Latin Edge Square design.
+    Construct a Latin Edge Square _design.
 
     This is a wrapper of the fortran code:
     `latin_center() <http://people.sc.fsu.edu/~jburkardt/f_src/latin_edge/latin_edge.html>`_.
@@ -81,16 +81,16 @@ def latin_edge(num_points, num_dim, seed=None):
 
     Examples
     --------
-    >>> x = best.design.latin_edge(10, 2)
+    >>> x = best._design.latin_edge(10, 2)
     >>> print x
     """
     num_points, num_dim, seed = _check_args(num_points, num_dim, seed)
-    return design.latin_edge(num_dim, num_points, seed).T
+    return _design.latin_edge(num_dim, num_points, seed).T
 
 
 def latin_random(num_points, num_dim, seed=None):
     """
-    Construct a Latin Random Square design.
+    Construct a Latin Random Square _design.
 
     This is a wrapper of the fortran code:
     `latin_center() <http://people.sc.fsu.edu/~jburkardt/f_src/latin_random/latin_random.html>`_.
@@ -111,11 +111,11 @@ def latin_random(num_points, num_dim, seed=None):
 
     Examples
     --------
-    >>> x = best.design.latin_random(10, 2)
+    >>> x = best._design.latin_random(10, 2)
     >>> print x
     """
     num_points, num_dim, seed = _check_args(num_points, num_dim, seed)
-    return design.latin_random(num_dim, num_points, seed).T
+    return _design.latin_random(num_dim, num_points, seed).T
 
 
 def latinize(table):
@@ -136,11 +136,11 @@ def latinize(table):
     Examples
     --------
     >>> X = np.random.rand(100, 2)
-    >>> X_adj = best.design.latinize(table)
+    >>> X_adj = best._design.latinize(table)
     >>> plt.plot(X[:, 0], X[:, 1], '+', X_adj[:, 0], X_adj[:, 1], 'o')
     >>> plt.show()
     """
-    return design.latinize(table.T.copy()).T
+    return _design.latinize(table.T.copy()).T
 
 
 def _sg_string_to_rule(rule_str):
@@ -211,8 +211,8 @@ def sparse_grid(num_dim, max_level, rule='CC'):
                     The weights of the grid points.
     """
     rule = _sg_string_to_rule(rule)
-    num_point = design.levels_index_size(num_dim, max_level, rule)
-    grid_weight, grid_point = design.sparse_grid(num_dim, max_level,
+    num_point = _design.levels_index_size(num_dim, max_level, rule)
+    grid_weight, grid_point = _design.sparse_grid(num_dim, max_level,
                                                  rule, num_point)
     return grid_point.T, grid_weight.T
 
@@ -234,7 +234,7 @@ def faure(num_points, num_dim):
                     The first num_points of the num_dim-dimensional.
 
     """
-    return design.faure_generate(num_dim, num_points).T
+    return _design.faure_generate(num_dim, num_points).T
 
 
 def halton(num_points, num_dim):
@@ -254,7 +254,7 @@ def halton(num_points, num_dim):
                     The first num_points of the num_dim-dimensional.
 
     """
-    return design.halton_sequence(num_dim, num_points).T
+    return _design.halton_sequence(num_dim, num_points).T
 
 
 def hammersley(num_points, num_dim):
@@ -274,7 +274,7 @@ def hammersley(num_points, num_dim):
                     The first num_points of the num_dim-dimensional.
 
     """
-    return design.hammersley_sequence(num_dim, num_points).T
+    return _design.hammersley_sequence(num_dim, num_points).T
 
 
 def ihs(num_points, num_dim, seed=None, duplication=5):
@@ -299,8 +299,8 @@ def ihs(num_points, num_dim, seed=None, duplication=5):
 
     """
     if seed is None:
-        seed = design.get_seed()
-    return design.ihs(num_dim, num_points, seed=seed,
+        seed = _design.get_seed()
+    return _design.ihs(num_dim, num_points, seed=seed,
                       duplication=duplication).T
 
 
@@ -323,7 +323,7 @@ def sobol(num_points, num_dim, skip=0):
                     The first num_points of the num_dim-dimensional.
 
     """
-    return design.i8_sobol_generate(num_dim, num_points, skip=skip).T
+    return _design.i8_sobol_generate(num_dim, num_points, skip=skip).T
 
 
 def lambert(num_points, num_dim):
