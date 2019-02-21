@@ -8,7 +8,7 @@ import glob
 
 
 setup(name='py-design',
-      version='1.0',
+      version='2.0',
       description='Design points for random experiments',
       author='Ilias Bilionis',
       author_email='ibilion@purdue.edu',
