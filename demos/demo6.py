@@ -20,11 +20,11 @@ num_dim = 2
 max_level = 7
 # Draw the design
 X, w = design.sparse_grid(num_dim, max_level, rule='F1')
-print 'After:'
-print 'Grid points:'
-print X
-print 'Weights:'
-print w
+print('After:')
+print('Grid points:')
+print(X)
+print('Weights:')
+print(w)
 # And plot it
 plt.plot(X[:, 0], X[:, 1], '.', markersize=10)
 plt.xlabel('$x_1$', fontsize=16)

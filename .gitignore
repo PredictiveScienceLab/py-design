@@ -13,3 +13,5 @@ src/Makefile
 src/cmake_install.cmake
 build
 backup
+venv*
+.venv*

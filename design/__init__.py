@@ -12,7 +12,7 @@ __all__ = ['latin_center', 'latin_edge', 'latin_random', 'latinize',
            'sparse_grid', 'faure', 'halton', 'ihs']
 
 
-import design._design as _design
+import _designfortran as _design
 
 
 def _check_args(num_points, num_dim, seed):
@@ -345,4 +345,4 @@ def lambert(num_points, num_dim):
     """
     assert num_dim <= 4
     func = 'lambert' + str(num_dim)
-    return getattr(design, func)(num_points).T
+    return getattr(_design, func)(num_points).T

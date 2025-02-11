@@ -23,10 +23,10 @@ X0 = np.random.rand(num_points, num_dim)
 # Latinize it
 X = design.latinize(X0)
 # Look at it
-print 'Before:'
-print X0
-print 'After:'
-print X
+print('Before:')
+print(X0)
+print('After:')
+print(X)
 # And plot it
 plt.plot(X0[:, 0], X[:, 1], 'b.', markersize=10)
 plt.plot(X[:, 0], X[:, 1], 'r.', markersize=10)

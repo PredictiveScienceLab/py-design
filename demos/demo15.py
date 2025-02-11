@@ -22,7 +22,7 @@ num_points = 100
 skip = 10
 # Draw the design
 X = design.sobol(num_points, num_dim, skip=10)
-print X
+print(X)
 # And plot it
 plt.plot(X[:, 0], X[:, 1], '.', markersize=10)
 plt.xlabel('$x_1$', fontsize=16)

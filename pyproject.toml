@@ -1,0 +1,27 @@
+[build-system]
+requires = ["meson-python", "numpy"]
+build-backend = "mesonpy"
+
+[project]
+name = "py-design"
+version = "2.1"
+description = "Design points for random experiments"
+readme = "README.md"
+authors = [
+    {name = "Ilias Bilionis", email = "ibilion@purdue.edu"}
+]
+urls = {Homepage = "https://github.com/ebilionis/py-design"}
+keywords = [
+    "design", "random experiment", "latin hypercube",
+    "sparse grid", "computer experiments"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Fortran",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering"
+]
+dependencies = [
+  "numpy"
+]
+license = { file = "LICENSE.txt" }
