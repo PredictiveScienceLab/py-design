@@ -20,7 +20,7 @@ num_dim = 2
 num_points = 100
 # Draw the design
 X = design.lambert(num_points, num_dim)
-print X
+print(X)
 # And plot it
 plt.plot(X[:, 0], X[:, 1], '.', markersize=10)
 plt.xlabel('$x_1$', fontsize=16)

@@ -20,7 +20,7 @@ num_points = 10
 # Create the design
 X = design.latin_random(num_points, num_dim)
 # Look at it
-print X
+print(X)
 # And plot it
 plt.plot(X[:, 0], X[:, 1], '.', markersize=10)
 plt.xlabel('$x_1$', fontsize=16)
